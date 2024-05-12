@@ -1,0 +1,90 @@
+body {
+    margin: 0px;
+}
+/* ヘッダー要素 */
+header {  
+    margin-bottom: 20px;
+    background-color: rgb(244, 79, 79);
+    text-align: center;
+}
+h1 {
+    margin: 0px;
+    color: rgb(255, 255, 255);
+}
+/* メイン要素 */
+main {
+    padding: 10px;
+}
+#parent {
+    display: flex;
+    justify-content: space-around;
+
+}
+.contents {
+    border: 3px solid rgb(238, 204, 204);
+    flex-basis: 25%;
+    padding: 10px 15px; 
+    margin: 20px 0; 
+    text-align: center; 
+  }
+h2 {
+    font-size: 25px;
+    text-decoration: underline 3px dotted rgb(236, 122, 122); /* 下線の点線を設定 */
+    margin-left: 20px; 
+    position: relative; 
+  } 
+h2::before {
+    content: "●"; 
+    color: rgb(239, 111, 139);
+  } 
+p {
+    margin: 0px;
+    font-size: 20px;
+}
+.contents p:nth-of-type(2):first-letter {
+    font-weight: bold;
+    color: rgb(97, 206, 249);
+}
+.contents img {
+    margin: 10px 0;
+    width: 70%;
+  }
+/* フッター要素 */
+footer {
+    background-color: rgb(244, 79, 79);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+a {
+    font-size: 20px;
+    color: rgb(255, 255, 255);    
+}
+/* 訪問済みリンクの色を青に設定 */
+a:visited {
+    color: rgb(193, 234, 251); 
+  } 
+  /* マウスカーソルが乗った時の色をピンクに設定 */
+a:hover {
+    color: rgb(245, 178, 168); 
+  }
+  /* レスポンシブ対応最後に画面幅に合わせて表示内容が変わる設定 */
+@media screen and (max-width: 768px) {
+    #parent {
+      flex-direction: column; /* Flexアイテムを縦方向に並べる */
+    }
+    #parent > .content{
+      display: block;
+    }
+    h2 {
+    font-size: 30px;
+    }
+    p {
+    font-size: 25px;
+    }
+    parent {
+    display: block;
+    }
+}  
+
+
